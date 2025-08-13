@@ -15,54 +15,32 @@ export default function Hero() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <motion.div 
-            className="md:w-1/2 text-center md:text-left mb-12 md:mb-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            style={{ opacity: 1, transform: 'translateY(0)' }}
-          >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+          <div className="md:w-1/2 text-center md:text-left mb-12 md:mb-0 animate-fade-in-up">
+            <div className="animate-fade-in-scale animation-delay-200">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
                 <span className="text-gray-800 dark:text-gray-200">Hi, I'm </span>
                 <span className="text-blue-600 dark:text-blue-400 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">Mark</span>
               </h1>
-            </motion.div>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-            >
+            <div className="animate-fade-in-up animation-delay-400">
               <h2 className="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8">
                 Full Stack Developer & Computer Science Student
               </h2>
-            </motion.div>
+            </div>
             
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
+            <div className="animate-fade-in-up animation-delay-600">
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-10 max-w-xl">
                 I build modern web applications with React, Next.js, and Node.js.
                 Currently studying Computer Science at the Faculty of Computer and Information Science.
               </p>
-            </motion.div>
+            </div>
             
-            <motion.div 
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start animate-fade-in-up animation-delay-800">
               <motion.div
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                className="animate-fade-in-up animation-delay-1000"
               >
                 <Link 
                   href="#projects" 
@@ -75,6 +53,7 @@ export default function Hero() {
               <motion.div
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
+                className="animate-fade-in-up animation-delay-1200"
               >
                 <Link 
                   href="#contact" 
@@ -83,16 +62,10 @@ export default function Hero() {
                   Contact Me
                 </Link>
               </motion.div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
           
-          <motion.div 
-            className="md:w-1/2 flex justify-center"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            style={{ opacity: 1, transform: 'scale(1)' }}
-          >
+          <div className="md:w-1/2 flex justify-center animate-fade-in-scale">
             <div className="relative">
               {/* Glassmorphism card */}
               <div className="w-72 h-72 md:w-96 md:h-96 bg-white/20 dark:bg-gray-800/20 backdrop-blur-lg rounded-full overflow-hidden border border-white/30 dark:border-gray-700/30 shadow-2xl">
@@ -107,18 +80,10 @@ export default function Hero() {
               </div>
               
               {/* Floating elements around the profile */}
-              <motion.div
-                className="absolute -top-4 -right-4 w-6 h-6 bg-yellow-400 rounded-full"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-              <motion.div
-                className="absolute -bottom-4 -left-4 w-4 h-4 bg-green-400 rounded-full"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-              />
+              <div className="absolute -top-4 -right-4 w-6 h-6 bg-yellow-400 rounded-full animate-bounce"></div>
+              <div className="absolute -bottom-4 -left-4 w-4 h-4 bg-green-400 rounded-full animate-bounce animation-delay-1000"></div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
