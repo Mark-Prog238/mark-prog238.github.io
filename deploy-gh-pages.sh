@@ -3,8 +3,7 @@
 # Build the site
 npm run build
 
-# Navigate to the dist directory
-cd dist
+# Navigate to the out directory (for Next.js static export)
 
 # Create .nojekyll file
 touch .nojekyll
@@ -17,6 +16,9 @@ git add .
 
 # Commit
 git commit -m "Deploy to GitHub Pages"
+
+# Rename branch to gh-pages
+git branch -M gh-pages
 
 # Add remote if not already done
 git remote remove origin 2>/dev/null || true
