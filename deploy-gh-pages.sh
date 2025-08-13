@@ -7,8 +7,6 @@ npm run build
 touch out/.nojekyll
 
 # Navigate to the out directory
-cd out
-
 # Initialize git if not already done
 git init
 
