@@ -33,7 +33,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} antialiased bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-200 min-h-screen flex flex-col`}>
+      <body className={`${inter.className} antialiased bg-gray-900 text-gray-200 min-h-screen flex flex-col`}>
         <ThemeProvider>
           <ParticleBackground />
           {children}
