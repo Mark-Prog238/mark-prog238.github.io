@@ -7,8 +7,8 @@ npm run build
 touch out/.nojekyll
 cp static-index.html out/backup.html
 
-# Initialize gh-pages branch if needed
-git checkout -b gh-pages
+# Initialize main branch if needed
+git checkout -b main
 
 # Add all files from out directory
 git add -f out/
@@ -16,8 +16,8 @@ git add -f out/
 # Commit changes
 git commit -m "Deploy website"
 
-# Push to gh-pages branch
-git subtree push --prefix out origin gh-pages
+# Push to main branch
+git subtree push --prefix out origin main
 
 # Return to main branch
 git checkout main
