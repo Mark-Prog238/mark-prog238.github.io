@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://mark-dev.com',
+    url: 'https://mark-prog238.github.io',
     title: 'Mark Dev | Full Stack Developer',
     description: 'Personal portfolio showcasing my projects and skills as a Full Stack Developer',
     siteName: 'Mark Dev Portfolio',
@@ -39,6 +39,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${poppins.variable}`}>
+      <head>
+        {/* Add a base tag to ensure relative paths work correctly */}
+        <base href="/" />
+        {/* Add these meta tags to ensure proper rendering */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </head>
       <body className="antialiased bg-white text-gray-800 min-h-screen flex flex-col">
         {children}
       </body>
