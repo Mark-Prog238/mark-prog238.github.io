@@ -10,7 +10,7 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitResult, setSubmitResult] = useState<{success: boolean; message: string} | null>(null);
+  const [submitResult, setSubmitResult] = useState<{ success: boolean; message: string } | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -20,18 +20,18 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
+
+    // Simulate form submission or integrate with a service like EmailJS/Formspree
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitResult({
         success: true,
         message: 'Your message has been sent successfully! I will get back to you soon.'
       });
-      
+
       // Reset form
       setFormData({ name: '', email: '', message: '' });
-      
+
       // Clear success message after 5 seconds
       setTimeout(() => {
         setSubmitResult(null);
@@ -41,12 +41,12 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">Contact Me</h2>
-        
-        <div className="flex flex-col md:flex-row gap-12">
-          <motion.div 
-            className="md:w-1/2"
+      <div className="container mx-auto px-4 max-w-4xl">
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">Contact Me</h2>
+
+        <div className="flex flex-col lg:flex-row gap-12">
+          <motion.div
+            className="lg:w-1/2"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -57,7 +57,7 @@ export default function Contact() {
               Whether you have a question, want to discuss a potential project, or just want to say hello,
               feel free to reach out. I'll do my best to get back to you as soon as possible!
             </p>
-            
+
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-100 p-3 rounded-full text-blue-600">
@@ -67,10 +67,10 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">Email</h4>
-                  <a href="mailto:mark@example.com" className="text-blue-600 hover:underline">mark@example.com</a>
+                  <a href="mailto:marksalamon01@gmail.com" className="text-blue-600 hover:underline">marksalamon01@gmail.com</a>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-100 p-3 rounded-full text-blue-600">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,7 +84,7 @@ export default function Contact() {
                   </a>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-4">
                 <div className="bg-blue-100 p-3 rounded-full text-blue-600">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,16 +93,16 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-lg font-medium">LinkedIn</h4>
-                  <a href="https://linkedin.com/in/mark-dev" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                    linkedin.com/in/mark-dev
+                  <a href="https://www.linkedin.com/in/mark-salamon-b8a09435a/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                    linkedin.com/in/mark-salamon-b8a09435a
                   </a>
                 </div>
               </div>
             </div>
           </motion.div>
-          
-          <motion.div 
-            className="md:w-1/2"
+
+          <motion.div
+            className="lg:w-1/2"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -114,7 +114,7 @@ export default function Contact() {
                   {submitResult.message}
                 </div>
               )}
-              
+
               <div className="mb-6">
                 <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name</label>
                 <input
@@ -128,7 +128,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              
+
               <div className="mb-6">
                 <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email</label>
                 <input
@@ -142,7 +142,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              
+
               <div className="mb-6">
                 <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message</label>
                 <textarea
@@ -156,7 +156,7 @@ export default function Contact() {
                   required
                 />
               </div>
-              
+
               <button
                 type="submit"
                 disabled={isSubmitting}

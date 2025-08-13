@@ -39,7 +39,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com/in/mark-dev" 
+                href="https://linkedin.com/in/mark-salamon-b8a09435a" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full transition-colors"
@@ -49,7 +49,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a 
-                href="mailto:mark@example.com"
+                href="mailto:marksalamon01@gmail.com"
                 className="bg-gray-700 hover:bg-gray-600 p-2 rounded-full transition-colors"
               >
                 <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

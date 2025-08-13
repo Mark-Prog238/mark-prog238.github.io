@@ -4,14 +4,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Fixed assetPrefix with leading slash
-  assetPrefix: '/',
   typescript: {
     ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
-  }
+  },
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
