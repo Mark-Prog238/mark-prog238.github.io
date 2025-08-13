@@ -17,7 +17,7 @@ export default function Projects() {
       id: 1,
       title: "Portfolio Website",
       description: "A responsive portfolio website built with Next.js and React. Features smooth animations, responsive design, and modern UI elements.",
-      image: "/images/portfolio.jpg",
+      image: "/images/portfolio.jpg", // Updated path
       tags: ["React", "Next.js", "Tailwind CSS"],
       githubLink: "https://github.com/Mark-Prog238/portfolio-website",
       liveLink: "https://portfolio.mark-dev.com"
@@ -26,7 +26,7 @@ export default function Projects() {
       id: 2,
       title: "Task Manager",
       description: "A full-stack task management application with user authentication, task categories, due dates, and priority levels.",
-      image: "/images/task-manager.jpg",
+      image: "/images/task-manager.jpg", // Updated path
       tags: ["React", "Node.js", "MongoDB"],
       githubLink: "https://github.com/Mark-Prog238/task-manager",
     },
@@ -34,7 +34,7 @@ export default function Projects() {
       id: 3,
       title: "Weather App",
       description: "A weather forecasting app that uses OpenWeatherMap API to display current conditions and 5-day forecasts with interactive maps.",
-      image: "/images/weather-app.jpg",
+      image: "/images/weather-app.jpg", // Updated path
       tags: ["JavaScript", "API Integration", "CSS"],
       githubLink: "https://github.com/Mark-Prog238/weather-app",
       liveLink: "https://weather.mark-dev.com"
