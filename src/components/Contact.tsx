@@ -51,6 +51,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
+            style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
           >
             <h3 className="text-2xl font-semibold mb-6 text-blue-600">Get In Touch</h3>
             <p className="text-gray-700 mb-8">
@@ -107,6 +108,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
+            style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
           >
             <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-lg shadow-md">
               {submitResult && (

@@ -55,6 +55,7 @@ export default function Skills() {
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
+                    style={{ opacity: 1 }} // Fallback for static export
                   >
                     <motion.div 
                       className={`h-2.5 rounded-full ${skill.color}`}
@@ -62,6 +63,7 @@ export default function Skills() {
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}
                       viewport={{ once: true }}
+                      style={{ width: `${skill.level}%` }} // Fallback for static export
                     />
                   </motion.div>
                 </div>

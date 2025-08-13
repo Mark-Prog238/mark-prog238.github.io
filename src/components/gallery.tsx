@@ -50,6 +50,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+          style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
         >
           <h2 className="text-4xl font-bold text-gray-800 mb-4">My Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
@@ -67,6 +68,7 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group border border-gray-100"
+              style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
             >
               <div className="h-56 bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center relative overflow-hidden">
                 {/* Project initial letter with gradient background */}
@@ -136,6 +138,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           viewport={{ once: true }}
+          style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
         >
           <a 
             href="https://github.com/Mark-Prog238" 

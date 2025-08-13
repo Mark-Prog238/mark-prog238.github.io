@@ -18,6 +18,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            style={{ opacity: 1, transform: 'translateX(0)' }} // Fallback for static export
           >
             <h3 className="text-2xl font-semibold mb-6 text-blue-600">Who am I?</h3>
             
@@ -43,6 +44,7 @@ export default function About() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
               viewport={{ once: true }}
+              style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
             >
               <a 
                 href="/resume.pdf" 
@@ -63,6 +65,7 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            style={{ opacity: 1, transform: 'translateX(0)' }} // Fallback for static export
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Replace the existing divs with enhanced hover animation cards */}
@@ -118,6 +121,7 @@ export default function About() {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ scale: 1.03 }}
+                  style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
                 >
                   {item.icon}
                   <h4 className="text-xl font-semibold mb-3 text-gray-800">{item.title}</h4>

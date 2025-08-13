@@ -13,6 +13,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
           >
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               <span className="text-gray-800">Hi, I'm </span>
@@ -45,6 +46,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
+            style={{ opacity: 1, transform: 'scale(1)' }} // Fallback for static export
           >
             <div className="w-72 h-72 md:w-96 md:h-96 bg-blue-600 rounded-full overflow-hidden border-8 border-white shadow-xl">
               {/* Replace with your actual profile image */}
