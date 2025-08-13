@@ -34,23 +34,23 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">My Skills</h2>
+    <section id="skills" className="py-16 sm:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">My Skills</h2>
         
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
           {/* Frontend Skills */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-6 text-center">Frontend</h3>
-            <div className="space-y-5">
+          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center">Frontend</h3>
+            <div className="space-y-4 sm:space-y-5">
               {frontendSkills.map((skill, index) => (
                 <div key={index}>
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-sm text-gray-500">{skill.level}%</span>
+                  <div className="flex justify-between mb-1 sm:mb-2">
+                    <span className="font-medium text-sm sm:text-base">{skill.name}</span>
+                    <span className="text-xs sm:text-sm text-gray-500">{skill.level}%</span>
                   </div>
                   <motion.div 
-                    className="w-full bg-gray-200 rounded-full h-2.5"
+                    className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -58,7 +58,7 @@ export default function Skills() {
                     style={{ opacity: 1 }} // Fallback for static export
                   >
                     <motion.div 
-                      className={`h-2.5 rounded-full ${skill.color}`}
+                      className={`h-2 sm:h-2.5 rounded-full ${skill.color}`}
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -72,24 +72,24 @@ export default function Skills() {
           </div>
 
           {/* Backend Skills */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-6 text-center">Backend</h3>
-            <div className="space-y-5">
+          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center">Backend</h3>
+            <div className="space-y-4 sm:space-y-5">
               {backendSkills.map((skill, index) => (
                 <div key={index}>
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-sm text-gray-500">{skill.level}%</span>
+                  <div className="flex justify-between mb-1 sm:mb-2">
+                    <span className="font-medium text-sm sm:text-base">{skill.name}</span>
+                    <span className="text-xs sm:text-sm text-gray-500">{skill.level}%</span>
                   </div>
                   <motion.div 
-                    className="w-full bg-gray-200 rounded-full h-2.5"
+                    className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
                     <motion.div 
-                      className={`h-2.5 rounded-full ${skill.color}`}
+                      className={`h-2 sm:h-2.5 rounded-full ${skill.color}`}
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -102,24 +102,24 @@ export default function Skills() {
           </div>
 
           {/* Other Skills */}
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold mb-6 text-center">DevOps & Tools</h3>
-            <div className="space-y-5">
+          <div className="bg-white p-4 sm:p-6 rounded-lg shadow-md md:col-span-2 lg:col-span-1">
+            <h3 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6 text-center">DevOps & Tools</h3>
+            <div className="space-y-4 sm:space-y-5">
               {otherSkills.map((skill, index) => (
                 <div key={index}>
-                  <div className="flex justify-between mb-1">
-                    <span className="font-medium">{skill.name}</span>
-                    <span className="text-sm text-gray-500">{skill.level}%</span>
+                  <div className="flex justify-between mb-1 sm:mb-2">
+                    <span className="font-medium text-sm sm:text-base">{skill.name}</span>
+                    <span className="text-xs sm:text-sm text-gray-500">{skill.level}%</span>
                   </div>
                   <motion.div 
-                    className="w-full bg-gray-200 rounded-full h-2.5"
+                    className="w-full bg-gray-200 rounded-full h-2 sm:h-2.5"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
                   >
                     <motion.div 
-                      className={`h-2.5 rounded-full ${skill.color}`}
+                      className={`h-2 sm:h-2.5 rounded-full ${skill.color}`}
                       initial={{ width: 0 }}
                       whileInView={{ width: `${skill.level}%` }}
                       transition={{ duration: 0.8, delay: index * 0.1 }}

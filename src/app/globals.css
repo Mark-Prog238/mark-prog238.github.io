@@ -17,6 +17,9 @@ body {
     )
     rgb(var(--background-start-rgb));
   font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -61,10 +64,44 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Mobile-first responsive utilities */
+@layer utilities {
+  .mobile-first {
+    /* Mobile-first approach */
+  }
+  
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Touch-friendly button sizes */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mobile-optimized spacing */
+  .mobile-spacing {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Mobile-optimized text sizes */
+  .mobile-text {
+    @apply text-sm sm:text-base lg:text-lg;
+  }
+  
+  .mobile-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl;
+  }
+}
+
 /* Add these smooth scrolling and selection styles */
 
 html {
   scroll-behavior: smooth;
+  /* Mobile viewport optimization */
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 ::selection {
@@ -72,26 +109,38 @@ html {
   color: white;
 }
 
+/* Mobile-specific optimizations */
+@media (max-width: 768px) {
+  /* Reduce animations on mobile for better performance */
+  .animate-blob {
+    animation: none;
+  }
+  
+  /* Optimize touch interactions */
+  button, a, input, textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Improve mobile scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* Add a subtle background pattern */
 .bg-pattern {
   background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.03'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.03'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* Custom utilities */
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 @layer components {
   .btn-primary {
-    @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg;
+    @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg touch-target;
   }
   
   .btn-secondary {
-    @apply px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-all duration-200;
+    @apply px-6 py-3 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium rounded-lg transition-all duration-200 touch-target;
   }
   
   .section-heading {
@@ -104,6 +153,16 @@ html {
   
   .card-hover {
     @apply hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  /* Mobile-optimized buttons */
+  .btn-mobile {
+    @apply touch-target px-4 sm:px-6 py-3 sm:py-4 text-sm sm:text-base;
+  }
+  
+  /* Mobile-optimized cards */
+  .card-mobile {
+    @apply p-4 sm:p-6 lg:p-8;
   }
 }
 
@@ -163,11 +222,11 @@ html {
 
 /* Custom button styles */
 .btn-primary {
-  @apply inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg transition-all transform hover:-translate-y-1 hover:shadow-lg hover:bg-blue-700;
+  @apply inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg transition-all transform hover:-translate-y-1 hover:shadow-lg hover:bg-blue-700 touch-target;
 }
 
 .btn-outline {
-  @apply inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-lg transition-all transform hover:-translate-y-1 hover:shadow-lg hover:bg-blue-50;
+  @apply inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-lg transition-all transform hover:-translate-y-1 hover:shadow-lg hover:bg-blue-50 touch-target;
 }
 
 /* Custom animations */
@@ -349,4 +408,62 @@ html {
 .static-visible {
   opacity: 1 !important;
   transform: none !important;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  /* Reduce motion for mobile performance */
+  .animate-blob {
+    animation: none;
+  }
+  
+  /* Optimize mobile touch targets */
+  button, a, input, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Mobile-optimized spacing */
+  .mobile-container {
+    @apply px-4;
+  }
+  
+  /* Mobile-optimized text */
+  .mobile-text {
+    @apply text-sm;
+  }
+  
+  .mobile-heading {
+    @apply text-2xl;
+  }
+}
+
+/* Tablet optimizations */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-container {
+    @apply px-6;
+  }
+  
+  .tablet-text {
+    @apply text-base;
+  }
+  
+  .tablet-heading {
+    @apply text-3xl;
+  }
+}
+
+/* Desktop optimizations */
+@media (min-width: 1025px) {
+  .desktop-container {
+    @apply px-8;
+  }
+  
+  .desktop-text {
+    @apply text-lg;
+  }
+  
+  .desktop-heading {
+    @apply text-4xl;
+  }
 }
