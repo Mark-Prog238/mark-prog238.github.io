@@ -22,7 +22,7 @@ git commit -m "Deploy to GitHub Pages"
 git remote remove origin 2>/dev/null || true
 git remote add origin https://github.com/Mark-Prog238/mark-prog238.github.io.git
 
-# Force push to main branch
-git push -f origin main
+# Force push to gh-pages branch
+git push -f origin gh-pages
 
 echo "Deployed to GitHub Pages!"
