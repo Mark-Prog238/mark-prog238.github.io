@@ -5,7 +5,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  trailingSlash: true, // Ensure paths work correctly on GitHub Pages
+  trailingSlash: true, // Ensures paths like /about/ work correctly
   typescript: {
     ignoreBuildErrors: true,
   },
