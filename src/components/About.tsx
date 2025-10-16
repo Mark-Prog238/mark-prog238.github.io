@@ -47,8 +47,7 @@ export default function About() {
               style={{ opacity: 1, transform: 'translateY(0)' }} // Fallback for static export
             >
               <a 
-                href="/resume.pdf" 
-                download="Mark_Dev_Resume.pdf"
+                href="https://mmitacnz-my.sharepoint.com/:w:/g/personal/264070_365kit_co/EXJdcZgJui5PvN5iB3UDgtgBk5_l7ROL5ZNsKP-RjtVrbg?e=qeoEp8" 
                 className="inline-flex items-center px-4 sm:px-6 py-3 sm:py-4 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-all transform hover:-translate-y-1 hover:shadow-lg text-sm sm:text-base"
               >
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
